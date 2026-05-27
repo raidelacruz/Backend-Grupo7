@@ -13,6 +13,7 @@ public class Producto {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Autoincrementable en MySQL para los id´s
     private Long id;
     private String nombre;
+    private String categoria;
     private double precio;
     private Integer stock;
 
@@ -48,6 +49,12 @@ public class Producto {
     }
     public void setStock(Integer stock) {
         this.stock = stock;
+    }
+    public String getCategoria() {
+        return categoria;
+    }
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
     }
     
 }

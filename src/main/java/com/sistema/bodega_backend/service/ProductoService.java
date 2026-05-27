@@ -1,6 +1,7 @@
 package com.sistema.bodega_backend.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,5 +20,8 @@ public class ProductoService {
     //logica para guardar o actualizar un producto
     public Producto guardar(Producto producto){
         return productoRepository.save(producto);
+    }
+    public Optional<Producto> buscarPorId(long id){
+        return productoRepository.findById(id);
     }
 }
