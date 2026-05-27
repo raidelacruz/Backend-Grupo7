@@ -8,8 +8,16 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name="pedidos")
 
 public class Pedido {
@@ -20,18 +28,7 @@ private String estudiante;
 private LocalDateTime fecha;
 private String estado;
 private double total;
-//constructores 
 
-public Pedido() {
-}
-
-public Pedido(Long id, String estudiante, LocalDateTime fecha, String estado, double total) {
-    this.id = id;
-    this.estudiante = estudiante;
-    this.fecha = fecha;
-    this.estado = estado;
-    this.total = total;
-}
 @PrePersist
     protected void onCreate() {
         this.fecha = LocalDateTime.now();
