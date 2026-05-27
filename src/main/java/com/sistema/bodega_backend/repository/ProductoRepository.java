@@ -1,0 +1,13 @@
+package com.sistema.bodega_backend.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.sistema.bodega_backend.entity.Producto;
+
+@Repository
+public interface ProductoRepository extends JpaRepository<Producto, Long>{
+// Al heredar de JpaRepository, ya tenemos: save(), findAll(), findById(), deleteById()
+
+    
+}
