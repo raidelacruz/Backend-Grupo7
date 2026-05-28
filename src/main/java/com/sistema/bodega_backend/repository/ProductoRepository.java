@@ -7,7 +7,5 @@ import com.sistema.bodega_backend.entity.Producto;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<Producto, Long>{
-// Al heredar de JpaRepository, ya tenemos: save(), findAll(), findById(), deleteById()
-
     
 }

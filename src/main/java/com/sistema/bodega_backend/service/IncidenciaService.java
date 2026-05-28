@@ -33,7 +33,7 @@ public class IncidenciaService {
     // Cambiar estado 
     public Optional<Incidencia> cambiarEstado(Long id, String nuevoEstado) {
         return incidenciaRepository.findById(id).map(incidencia -> {
-            incidencia.setEstado(nuevoEstado.toUpperCase()); // Asegura mayúsculas
+            incidencia.setEstado(nuevoEstado.toUpperCase()); 
             return incidenciaRepository.save(incidencia);
         });
     }

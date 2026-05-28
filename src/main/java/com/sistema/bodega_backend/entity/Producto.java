@@ -15,10 +15,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "productos")//asi se llamara la tabla en mysql
+@Table(name = "productos")
 public class Producto {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // Autoincrementable en MySQL para los id´s
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
     private String nombre;
     private String categoria;
